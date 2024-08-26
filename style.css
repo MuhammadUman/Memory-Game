@@ -1,0 +1,66 @@
+body {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
+
+.new {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative; /* Add this to allow z-index to work */
+  z-index: 1; /* Lower z-index value */
+}
+
+#grid {
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+.image {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* bottom: 180px; */
+  top: -880px;
+  left: 0;
+  z-index: 2;
+  animation: popup 0.9s ease-in-out 1s 1 normal forwards;
+}
+
+@keyframes popup {
+  0% {
+  }
+  70% {
+    transform: translateY(1600px);
+  }
+  100% {
+    transform: translateY(700px);
+  }
+}
+.win {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.again {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
